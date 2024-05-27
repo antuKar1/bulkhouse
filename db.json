@@ -1,0 +1,59 @@
+{
+  "shoes": [
+    {
+      "id": "001",
+      "name": "Men's Running Shoes",
+      "brand": "Nike",
+      "price": "99.99",
+      "color": "Black/White",
+      "size": "12",
+      "category": "Running",
+      "availability": "true",
+      "image_url": "https://th.bing.com/th/id/OIP.3xBP6UbbYlGyvNgSLt0bowHaFC?rs=1&pid=ImgDetMain"
+    },
+    {
+      "id": "003",
+      "name": "Men's Basketball Shoes",
+      "brand": "Jordan",
+      "price": "129.99",
+      "color": "Red/Black",
+      "size": "11",
+      "category": "Basketball",
+      "availability": "false",
+      "image_url": "https://th.bing.com/th/id/OIP.YC_OejCXngHOiMOzUOKJMgHaHa?w=600&h=600&rs=1&pid=ImgDetMain"
+    },
+    {
+      "id": "004",
+      "name": "Women's Running Shoes",
+      "brand": "New Balance",
+      "price": 89.99,
+      "color": "Gray/Purple",
+      "size": "7",
+      "category": "Running",
+      "availability": true,
+      "image_url": "https://i.pinimg.com/736x/0e/02/ac/0e02acce09a2b391480b2769cb14999f.jpg"
+    },
+    {
+      "id": "006",
+      "name": "Women's Hiking Boots",
+      "brand": "Merrell",
+      "price": 149.99,
+      "color": "Brown",
+      "size": "8",
+      "category": "Hiking",
+      "availability": true,
+      "image_url": "https://th.bing.com/th/id/R.1d1fa44df37cf9d6a48346fd5df007b1?rik=DLl%2fBqAUE97ttA&pid=ImgRaw&r=0"
+    },
+    {
+      "id": "007",
+      "name": "Men's Skate Shoes",
+      "brand": "Vans",
+      "price": 69.99,
+      "color": "Black/Gum",
+      "size": "10.5",
+      "category": "Skateboarding",
+      "availability": true,
+      "image_url": "https://th.bing.com/th/id/OIP.cx7wLbZyKMGNvltNOmFNNgHaHa?w=800&h=800&rs=1&pid=ImgDetMain"
+    }
+  ]
+}
