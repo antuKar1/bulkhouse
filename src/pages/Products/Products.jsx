@@ -4,7 +4,7 @@ import Product from '../../component/products/Product';
 import { useLoaderData } from 'react-router-dom';
 
 const Products = ({value}) => {
-  console.log("Products",value.length)
+  
   return (
     
     <>

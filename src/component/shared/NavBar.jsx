@@ -1,82 +1,79 @@
-import React from "react";
-
+import React, { useContext } from "react";
+import { BiLogIn } from "react-icons/bi";
+import { Link, NavLink, useNavigate } from "react-router-dom";
+import { HiOutlineLogout } from "react-icons/hi";
+import { MdDashboard } from "react-icons/md";
+import { AuthContext } from "../../context/AuthProvider";
+import { FaCircleUser } from "react-icons/fa6";
 const NavBar = () => {
+  const navLink = (
+    <>
+      <NavLink to={"about"}>About</NavLink>
+      <NavLink to={"projects"}>Projects</NavLink>
+      <NavLink to={"blog"}>Blog</NavLink>
+      <NavLink to={"contact"}>Contact</NavLink>
+    </>
+  );
+const navigate=useNavigate();
+  const { user, logOut } = useContext(AuthContext);
+
+  //  Logout
+  const userLogOut = () => {
+    logOut()
+      .then((res) => {
+        swal("Aww yiss!😊", "You have Successfully Loged Out!", "success").then(
+          (value) => navigate("/")
+        );
+      })
+      .fetch((error) => swal("OOpss!😊", "Something Went Wrong!", "error"));
+  };
+
   return (
     <>
       <div className="navbar bg-base-100">
         <div className="flex-1">
-          <a className="btn btn-ghost text-xl">daisyUI</a>
+          <Link className=" text-xl font-bold"> bulkHouse</Link>
         </div>
         <div className="flex-none">
           <div className="dropdown dropdown-end">
-            <div
-              tabIndex={0}
-              role="button"
-              className="btn btn-ghost btn-circle"
-            >
-              <div className="indicator">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  className="h-5 w-5"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
+            <div className=" flex justify-center items-center gap-4">
+            {
+              user && <Link
+                className="text-lg font-semibold flex justify-center items-center gap-1"
+                to={"dashboard"}
+              >
+               <MdDashboard /> Dashboard{" "}
+              </Link>
+            }
+              {user ? 
+                <Link onClick={userLogOut}
+                  className="text-lg font-semibold flex justify-center items-center gap-1"
+                 
                 >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth="2"
-                    d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"
+                Log out <HiOutlineLogout />
+                 
+                </Link>
+               : 
+                <Link
+                  className="text-lg font-semibold flex justify-center items-center gap-1"
+                  to={"login"}
+                >
+                  Login <BiLogIn className="font-bold text-lg my-auto" />{" "}
+                </Link>
+              }
+
+              <Link className="text-3xl">
+                {user ? (
+                  <img
+                    className="w-12 rounded-full"
+                    alt="Tailwind CSS Navbar component"
+                    src={user.photoURL}
                   />
-                </svg>
-                <span className="badge badge-sm indicator-item">8</span>
-              </div>
+                ) : (
+                  <FaCircleUser />
+                )}
+              </Link>
             </div>
-            <div
-              tabIndex={0}
-              className="mt-3 z-[1] card card-compact dropdown-content w-52 bg-base-100 shadow"
-            >
-              <div className="card-body">
-                <span className="font-bold text-lg">8 Items</span>
-                <span className="text-info">Subtotal: $999</span>
-                <div className="card-actions">
-                  <button className="btn btn-primary btn-block">
-                    View cart
-                  </button>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div className="dropdown dropdown-end">
-            <div
-              tabIndex={0}
-              role="button"
-              className="btn btn-ghost btn-circle avatar"
-            >
-              <div className="w-10 rounded-full">
-                <img
-                  alt="Tailwind CSS Navbar component"
-                  src="https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.jpg"
-                />
-              </div>
-            </div>
-            <ul
-              tabIndex={0}
-              className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52"
-            >
-              <li>
-                <a className="justify-between">
-                  Profile
-                  <span className="badge">New</span>
-                </a>
-              </li>
-              <li>
-                <a>Settings</a>
-              </li>
-              <li>
-                <a>Logout</a>
-              </li>
-            </ul>
           </div>
         </div>
       </div>

@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react'
 
 import SingleProduct from '../../component/dashboard/product/SingleProduct'
 
+
 const AllProductsDashboard = () => {
  
 const [products,setProducts]=useState([])
@@ -19,7 +20,7 @@ const [products,setProducts]=useState([])
   return (
     <>
     
-    <div>
+    <div className='mt-28'>
     <h1 className='text-center text-3xl font-extrabold my-16'>All Products</h1>
     <div className='grid grid-cols-3 gap-10 px-20 mb-10 '>
       {

@@ -33,8 +33,8 @@ const AddProduct = () => {
   };
 
   return (
-    <div className="flex justify-center items-start h-screen ">
-      <div className="card w-1/2 bg-base-100 shadow-xl my-4 ">
+    <div className="flex justify-center items-start   ">
+      <div className="card w-1/2 bg-base-100 shadow-xl  mt-28 ">
         <div className="card-body">
           <h2 className="text-center text-3xl font-bold mb-8">
             Add Your Product

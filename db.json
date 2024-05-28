@@ -1,17 +1,6 @@
 {
   "shoes": [
     {
-      "id": "001",
-      "name": "Men's Running Shoes",
-      "brand": "Nike",
-      "price": "99.99",
-      "color": "Black/White",
-      "size": "12",
-      "category": "Running",
-      "availability": "true",
-      "image_url": "https://th.bing.com/th/id/OIP.3xBP6UbbYlGyvNgSLt0bowHaFC?rs=1&pid=ImgDetMain"
-    },
-    {
       "id": "003",
       "name": "Men's Basketball Shoes",
       "brand": "Jordan",
@@ -54,6 +43,50 @@
       "category": "Skateboarding",
       "availability": true,
       "image_url": "https://th.bing.com/th/id/OIP.cx7wLbZyKMGNvltNOmFNNgHaHa?w=800&h=800&rs=1&pid=ImgDetMain"
+    },
+    {
+      "id": "007a",
+      "name": "Men's Skate Shoes",
+      "brand": "Vans",
+      "price": 69.99,
+      "color": "Black/Gum",
+      "size": "10.5",
+      "category": "Skateboarding",
+      "availability": true,
+      "image_url": "https://th.bing.com/th/id/OIP.cx7wLbZyKMGNvltNOmFNNgHaHa?w=800&h=800&rs=1&pid=ImgDetMain"
+    },
+    {
+      "id": "007b",
+      "name": "Men's Skate Shoes",
+      "brand": "Vans",
+      "price": 69.99,
+      "color": "Black/Gum",
+      "size": "10.5",
+      "category": "Skateboarding",
+      "availability": true,
+      "image_url": "https://th.bing.com/th/id/OIP.cx7wLbZyKMGNvltNOmFNNgHaHa?w=800&h=800&rs=1&pid=ImgDetMain"
+    },
+    {
+      "id": "007c",
+      "name": "Men's Skate Shoes",
+      "brand": "Vans",
+      "price": 69.99,
+      "color": "Black/Gum",
+      "size": "10.5",
+      "category": "Skateboarding",
+      "availability": true,
+      "image_url": "https://th.bing.com/th/id/OIP.cx7wLbZyKMGNvltNOmFNNgHaHa?w=800&h=800&rs=1&pid=ImgDetMain"
+    },
+    {
+      "id": "",
+      "name": "",
+      "brand": "",
+      "price": "",
+      "color": "",
+      "size": "",
+      "category": "",
+      "availability": "",
+      "image_url": ""
     }
   ]
 }

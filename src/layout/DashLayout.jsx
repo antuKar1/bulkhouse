@@ -6,8 +6,8 @@ import Nav from "../component/dashboard/right/Nav";
 const DashLayout = () => {
   return (
     <div className="grid grid-cols-12 h-screen ">
-      <div className="col-span-2 bg-slate-300 h-screen  ">
-        <LeftNav></LeftNav>
+      <div className="col-span-2 bg-slate-300   ">
+        <LeftNav ></LeftNav>
       </div>
       <div className="col-span-10 pl-5 ">
         <Nav></Nav>

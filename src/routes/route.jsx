@@ -12,6 +12,9 @@ import ProductDetails from "../pages/ProductDetails";
 import AllProductsDashboard from "../pages/Dashboard/AllProductsDashboard";
 import AddProduct from "../pages/Dashboard/AddProduct";
 import EditProduct from "../pages/Dashboard/EditProduct";
+import Login from "../pages/Login";
+import Regestration from "../pages/Regestration";
+import PrivateRoute from "./PrivateRoute";
 
 const router = createBrowserRouter([
   {
@@ -41,11 +44,19 @@ const router = createBrowserRouter([
         path: "contact",
         element: <Contact></Contact>,
       },
+      {
+        path: "login",
+        element: <Login></Login>,
+      },
+      {
+        path: "regestration",
+        element: <Regestration></Regestration>,
+      },
     ],
   },
   {
     path: "dashboard",
-    element: <DashLayout></DashLayout>,
+    element: <PrivateRoute><DashLayout></DashLayout></PrivateRoute>,
     children: [
       {
         path: "allproducts",

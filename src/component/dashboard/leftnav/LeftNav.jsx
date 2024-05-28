@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 const LeftNav = () => {
   return (
-    <div className=" h-screen">
+    <div className=" h-screen fixed ">
     <ul className="menu  w-full text-center p-6 ">
       <li className="text-center">
         <Link to={"/"} className="">
